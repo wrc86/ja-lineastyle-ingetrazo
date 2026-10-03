@@ -22,6 +22,11 @@ Sirve para:
 Las líneas son geometría 3D real: se unen en los vértices, se dividen en los cruces
 y **un contorno cerrado y plano forma una cara**, como con la herramienta Línea nativa.
 
+![Muestrario de JA LineaStyle: estilos de trazo, colores y grosores](docs/estilos.png)
+
+*Arriba: los seis estilos de trazo en distintos grosores y colores, también sobre fondo
+oscuro. Centro: paleta y colores personalizados. Abajo: progresión de grosores en pantalla.*
+
 ### 2. Instalación
 
 1. Descarga `ja_lineastyle-0.1.1.zip` desde el catálogo de IngeTrazo o desde
@@ -40,7 +45,11 @@ y **un contorno cerrado y plano forma una cara**, como con la herramienta Línea
 - Menú **Extensiones → JA LineaStyle…**, o
 - clic derecho en la vista 3D → **JA LineaStyle**.
 
-El panel aparece como pestaña **LineaStyle** con su icono.
+El panel aparece como pestaña **LineaStyle** con su icono:
+
+![Pestaña LineaStyle](docs/pestana.png)
+
+![Panel de JA LineaStyle](docs/panel.png)
 
 ### 4. Controles del panel
 
@@ -48,11 +57,27 @@ El panel aparece como pestaña **LineaStyle** con su icono.
 |---|---|
 | **Paleta de colores** | Rojo, Naranja, Amarillo, Verde, Azul, Violeta, Negro y Blanco. |
 | **Otro color…** | Abre el selector para cualquier color. |
+| **Color actual** | Muestra el código del color activo (por ejemplo `#E53935`, el rojo de la paleta). |
 | **Grosor visual** | De **1 a 12 px**. Es grosor en pantalla: se mantiene igual al hacer zoom y no añade espesor físico. |
 | **Estilo de línea** | **Continua**, **Punteada**, **Interrumpida**, **Raya larga**, **Punto y raya**, **Dos puntos y raya**. |
 | **Dibujar línea de color** | Activa la herramienta de dibujo. |
 | **Aplicar a la selección** | Aplica color, grosor y estilo actuales a las líneas o grupos seleccionados. |
 | **Restaurar estilo** | Quita el estilo del plugin y vuelve al aspecto normal. |
+
+Debajo de los botones, el panel recuerda las reglas básicas: dos clics crean un
+segmento, Esc termina el tramo, todo queda en el mismo grupo y, para cambiar estilos,
+se selecciona y se pulsa **Aplicar**.
+
+#### Cuándo usar cada estilo (convención sugerida)
+
+| Estilo | Uso habitual en dibujo arquitectónico |
+|---|---|
+| **Continua** | Contornos visibles, bordes, recorridos. |
+| **Punteada** | Elementos ocultos o proyectados de poca importancia, límites de vegetación. |
+| **Interrumpida** | Aristas ocultas, elementos por encima del plano de corte (aleros, voladizos). |
+| **Raya larga** | Proyecciones, límites de zonas o áreas de influencia. |
+| **Punto y raya** | Ejes, ejes de simetría, líneas de centro. |
+| **Dos puntos y raya** | Límites de propiedad, linderos, retiros. |
 
 ### 5. Dibujar
 
@@ -151,6 +176,11 @@ with their conventional pattern, or sketch in 3D with coloured pencils.
 Lines are real 3D geometry: they join at vertices, split at crossings and
 **a closed planar outline becomes a face**, just like the native Line tool.
 
+![JA LineaStyle sample sheet: line styles, colours and weights](docs/estilos.png)
+
+*Top: the six line styles at several weights and colours, also on a dark background.
+Middle: palette and custom colours. Bottom: on-screen weight progression.*
+
 > **Note:** the interface is in Spanish. Spanish labels are shown in parentheses.
 
 ### 2. Installation
@@ -166,7 +196,11 @@ Lines are real 3D geometry: they join at vertices, split at crossings and
 ### 3. Opening the panel
 
 **Extensions → JA LineaStyle…** or right-click in the 3D view → **JA LineaStyle**.
-It appears as a **LineaStyle** panel tab.
+It appears as a **LineaStyle** panel tab:
+
+![LineaStyle tab](docs/pestana.png)
+
+![JA LineaStyle panel](docs/panel.png)
 
 ### 4. Panel controls
 
@@ -174,11 +208,23 @@ It appears as a **LineaStyle** panel tab.
 |---|---|
 | **Palette** | Red, Orange, Yellow, Green, Blue, Violet, Black, White. |
 | **Other colour…** (*Otro color…*) | Opens a colour picker. |
+| **Current colour** (*Color actual*) | Shows the active colour code, e.g. `#E53935` (palette red). |
 | **Visual weight** (*Grosor visual*) | **1–12 px** on screen; constant when zooming, no physical thickness. |
 | **Line style** (*Estilo de línea*) | Solid (*Continua*), Dotted (*Punteada*), Dashed (*Interrumpida*), Long dash (*Raya larga*), Dash-dot (*Punto y raya*), Dash-dot-dot (*Dos puntos y raya*). |
 | **Draw coloured line** (*Dibujar línea de color*) | Starts the drawing tool. |
 | **Apply to selection** (*Aplicar a la selección*) | Applies current colour, weight and style to the selected lines/groups. |
 | **Restore style** (*Restaurar estilo*) | Removes the plugin style. |
+
+#### Suggested use of each style
+
+| Style | Typical architectural use |
+|---|---|
+| **Solid** | Visible outlines, edges, paths. |
+| **Dotted** | Minor hidden/projected elements, planting limits. |
+| **Dashed** | Hidden edges, elements above the cut plane (eaves, overhangs). |
+| **Long dash** | Projections, zone limits. |
+| **Dash-dot** | Axes, centre lines, symmetry lines. |
+| **Dash-dot-dot** | Property lines, boundaries, setbacks. |
 
 ### 5. Drawing
 
