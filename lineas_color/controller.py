@@ -60,7 +60,8 @@ class Controller:
     def install(self):
         vp = self.app.viewport
         needed = ("_draw_rubber_band", "_set_section_clip", "_line_jitter", "_fb_size",
-                  "_group_chunk", "_instanced_eligible", "_placements", "_sync_edges", "_upload_hover_edge")
+                  "_group_chunk", "_instanced_eligible", "_placements", "_sync_edges", "_upload_hover_edge",
+                  "_pick_index")
         if not all(callable(getattr(vp, method, None)) for method in needed):
             raise RuntimeError("Esta versión de IngeTrazo no admite el renderizador de JA LineaStyle.")
         self.panel = QWidget()
@@ -116,6 +117,9 @@ class Controller:
                            "mientras siga activa esta herramienta.\n\n"
                            "Los segmentos comparten vértices. Cerrar un contorno coplanar crea una cara. "
                            "Abra el grupo con doble clic para continuar sobre sus planos.\n\n"
+                           "Tome referencias en extremos, puntos medios, cruces y aristas visibles. "
+                           "Después del primer clic, pase sobre una arista y pulse ↓ para "
+                           "fijar una paralela; pulse ↓ otra vez para una perpendicular.\n\n"
                            "Para cambiar color, grosor y estilo: seleccione líneas o su grupo "
                            "y pulse Aplicar.")
         help_text.setWordWrap(True)

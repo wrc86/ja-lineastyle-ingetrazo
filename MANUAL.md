@@ -1,6 +1,6 @@
 # JA LineaStyle · Manual de usuario / User manual
 
-**Versión / Version 0.1.1 · IngeTrazo 0.5.7 (API de extensiones 2) · Julio Angulo · GPL-3.0-or-later**
+**Versión / Version 0.1.2 · IngeTrazo 0.5.7 (API de extensiones 2) · Julio Angulo · GPL-3.0-or-later**
 
 [Español](#español) · [English](#english)
 
@@ -29,7 +29,7 @@ oscuro. Centro: paleta y colores personalizados. Abajo: progresión de grosores 
 
 ### 2. Instalación
 
-1. Descarga `ja_lineastyle-0.1.1.zip` desde el catálogo de IngeTrazo o desde
+1. Descarga `ja_lineastyle-0.1.2.zip` desde el catálogo de IngeTrazo o desde
    [las versiones del repositorio](https://github.com/wrc86/ja-ingetrazo-extensions/releases).
 2. Descomprímelo. Obtendrás una carpeta llamada **`lineas_color`**
    (es el nombre interno; se conserva para actualizar versiones anteriores).
@@ -99,6 +99,14 @@ un plano en dos caras. Los contornos que no son planos no forman superficies.
 
 **Seguir dibujando en un grupo:** haz **doble clic** en el grupo para abrirlo y vuelve
 a **Dibujar**: las líneas nuevas se agregan a esa misma malla, sin crear subgrupos.
+
+**Referencias al dibujar:** acerca la punta del cursor a extremos, puntos medios,
+cruces o cualquier punto de una arista visible. Funcionan las líneas nativas y los
+seis estilos de JA LineaStyle, también en los huecos del patrón, en grupos girados
+o anidados y sobre las líneas recién dibujadas. Después del primer clic, pasa por una
+arista y pulsa **↓** para fijar una dirección paralela, otra vez para una perpendicular
+y otra vez para liberarla. **Shift** mantiene una inferencia activa; las otras flechas
+bloquean los ejes nativos. La geometría oculta no ofrece referencias.
 
 ### 6. Cambiar el estilo de líneas existentes
 
@@ -185,7 +193,7 @@ Middle: palette and custom colours. Bottom: on-screen weight progression.*
 
 ### 2. Installation
 
-1. Download `ja_lineastyle-0.1.1.zip` from the IngeTrazo catalog or the
+1. Download `ja_lineastyle-0.1.2.zip` from the IngeTrazo catalog or the
    [repository releases](https://github.com/wrc86/ja-ingetrazo-extensions/releases).
 2. Unzip it. You get a folder named **`lineas_color`** (internal name, kept for upgrades).
 3. In IngeTrazo open **Extensions → Open plugins folder** and copy the folder there.
@@ -238,6 +246,13 @@ Everything drawn while the tool stays active goes into **one group**, even if yo
 colour or style; each edge keeps its own properties. Switching tools and coming back
 starts a new group. **Double-click** a group to open it and keep drawing in the same mesh.
 Closing a planar outline creates a face; non-planar outlines do not.
+
+**Drawing references:** aim the pencil tip at endpoints, midpoints, intersections
+or any point on a visible edge. Native lines and all six JA LineaStyle patterns work,
+including visual gaps, rotated or nested groups and lines drawn in the current session.
+After the first click, hover an edge and press **↓** to lock parallel to it, again for
+perpendicular and again to release. **Shift** holds the current inference; the other
+arrows lock native axes. Hidden geometry does not attract references.
 
 ### 6. Restyling existing lines
 

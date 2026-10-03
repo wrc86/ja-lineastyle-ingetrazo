@@ -2,7 +2,7 @@
 # Copyright (C) 2026 Julio Angulo
 """JA LineaStyle 3D for IngeTrazo's extension API 2."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __license__ = "GPL-3.0-or-later"
 __author__ = "Julio Angulo"
 __plugin_name__ = "JA LineaStyle"

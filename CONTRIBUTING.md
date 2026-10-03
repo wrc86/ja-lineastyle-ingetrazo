@@ -1,11 +1,11 @@
 # Contribuir a JA LineaStyle
 
-JA LineaStyle 0.1.1 es un plugin de código abierto bajo **GPL-3.0-or-later**.
+JA LineaStyle 0.1.2 es un plugin de código abierto bajo **GPL-3.0-or-later**.
 Las contribuciones se distribuyen bajo esa misma licencia. Véase `LICENSE`.
 
 ## Preparar el entorno
 
-Descomprima `JA_LineaStyle_v0.1.1_source.zip` y trabaje desde su raíz. Requiere
+Descomprima `JA_LineaStyle_v0.1.2_source.zip` y trabaje desde su raíz. Requiere
 Python 3.10 o posterior, Git y las dependencias de IngeTrazo. El programa
 anfitrión se descarga por separado; no forma parte del paquete del plugin.
 

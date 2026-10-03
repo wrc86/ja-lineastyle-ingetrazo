@@ -1,6 +1,6 @@
 # JA LineaStyle · IngeTrazo
 
-Versión 0.1.1. Extensión para dibujar líneas 3D con color, grosor y estilo,
+Versión 0.1.2. Extensión para dibujar líneas 3D con color, grosor y estilo,
 en una malla compartida por sesión de dibujo. Cerrar contornos coplanares forma caras.
 Probada con IngeTrazo 0.5.7 y la API de extensiones 2. Incluye un icono SVG propio
 en la opción **Extensiones → JA LineaStyle…** y en el menú contextual.
@@ -8,7 +8,7 @@ La pestaña de los paneles muestra **LineaStyle** con su icono.
 
 ## Instalación
 
-1. Descomprima `JA_LineaStyle_v0.1.1.zip`.
+1. Descomprima `JA_LineaStyle_v0.1.2.zip`.
 2. En IngeTrazo, abra **Extensiones → Abrir carpeta de plugins**.
 3. Si tiene una versión anterior de Líneas de colores, sustituya su carpeta existente.
    Copie la carpeta **`lineas_color` completa** a esa ubicación.
@@ -29,6 +29,13 @@ No instale el ZIP como un `.rbz`: esta es una extensión Python de IngeTrazo.
   **Esc** termina el tramo y permite empezar otro en el mismo grupo.
 - El cursor es un lápiz del color seleccionado; su punta marca el punto de dibujo.
   Cambiar el color actualiza el lápiz de inmediato, también con **Otro color…**.
+- Puede tomar referencias en **extremos, puntos medios, cruces y puntos sobre aristas**,
+  tanto de líneas nativas como de líneas con cualquiera de los seis estilos, incluyendo
+  los huecos visuales del patrón. También funcionan los grupos y componentes girados
+  o anidados, y las líneas recién dibujadas en la misma sesión.
+  Después del primer clic, pase el cursor sobre una arista y pulse **↓** para fijar una
+  dirección paralela; pulse **↓** otra vez para una perpendicular y otra vez para liberarla.
+  Las flechas de los ejes y **Shift** conservan los bloqueos del dibujo nativo.
 - Todas las líneas quedan dentro de un único grupo mientras siga activa la herramienta,
   incluso al cambiar las propiedades, cerrar un recorrido o volver a pulsar Dibujar.
   Cada arista conserva sus propiedades dentro de la **misma malla**, sin subgrupos.
@@ -80,17 +87,23 @@ Una lámina renderizada como imagen utiliza las propiedades del plugin.
 La API pública 2 no expone un pase 3D para colores de aristas. El plugin adapta el pase
 de previsualización y filtra las matrices de dibujo de aristas del viewport 0.5.7,
 para que los huecos no contengan una línea continua debajo. Mantiene intacta la
-geometría utilizada para caras, inferencias y selección, sin editar archivos del programa. Una versión
+geometría utilizada para caras, inferencias y selección. Al construir el índice de
+referencias, proporciona las aristas completas al detector nativo, incluso si su patrón
+tiene huecos. Respeta la geometría oculta y la ocultación del entorno al editar un grupo,
+sin editar archivos del programa. Una versión
 futura de IngeTrazo puede necesitar actualizar este adaptador. Si el pase falla, se
 desactiva y las líneas siguen disponibles con el color normal del estilo.
 
 ## Verificación
 
-Las 59 pruebas del plugin utilizan el cargador, las herramientas, el planificador de caras y el
+Las 72 pruebas del plugin utilizan el cargador, las herramientas, el planificador de caras y el
 códec `.igz` reales de IngeTrazo 0.5.7. Verifican sesiones, caras conectadas, cruces,
 propiedades por arista, edición dentro del grupo, migración de sesiones antiguas,
 deshacer/rehacer, copia, movimiento y guardado/reapertura. También verifican el color
 del lápiz, su punta, pantallas de distinta densidad y el cambio a otras herramientas.
+Las pruebas de referencias recorren la detección real desde posiciones de pantalla:
+extremos, puntos medios, aristas, cruces, grupos girados y anidados, bloqueo paralelo
+y perpendicular, caras cerradas con referencias y exclusión de geometría oculta.
 Las pruebas con OpenGL
 real verifican colores, grosores, huecos de los seis estilos, selección, restauración
 del renderizador nativo, ocultación detrás de caras y recorte de sección.
@@ -101,7 +114,7 @@ JA LineaStyle se distribuye bajo **GPL-3.0-or-later**. El código fuente, la doc
 las pruebas y el modelo de ejemplo se pueden estudiar, modificar y redistribuir bajo
 esa licencia. El texto completo está en [LICENSE](LICENSE).
 
-El paquete `JA_LineaStyle_v0.1.1_source.zip` incluye el código y las herramientas para
+El paquete `JA_LineaStyle_v0.1.2_source.zip` incluye el código y las herramientas para
 reproducir las pruebas y generar ambos ZIP. Consulte [CONTRIBUTING.md](CONTRIBUTING.md),
 [CHANGELOG.md](CHANGELOG.md) y [NOTICES.md](NOTICES.md).
 

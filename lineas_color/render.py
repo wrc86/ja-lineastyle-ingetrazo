@@ -43,6 +43,8 @@ class ColorRenderer:
         self.placements = viewport._placements
         self.sync = viewport._sync_edges
         self.hover = viewport._upload_hover_edge
+        self.pick = viewport._pick_index
+        self._picking = 0
         self.failed = False
         self.sources = {}
         self.inherited = {}
@@ -54,6 +56,10 @@ class ColorRenderer:
         self.viewport._placements = self.styled_placements
         self.viewport._sync_edges = self.filtered_sync
         self.viewport._upload_hover_edge = self.filtered_hover
+        self.viewport._pick_index = self.picking_index
+        # Discard any index made with a filtered draw chunk before installation.
+        self.viewport._pick_index_cache = None
+        self.viewport._pick_block = None
 
     def styled_placements(self):
         placements = self.placements()
@@ -80,11 +86,19 @@ class ColorRenderer:
 
     def filtered_chunk(self, group):
         chunk = self.chunk(group)
-        if self.has_style(group):
-            # Copy the DRAW array only. Native triangles, pick acceleration,
-            # bounds, snapping and topology retain the complete native edges.
+        if not self._picking and self.has_style(group):
+            # Hide the continuous underlay only while building DRAW buffers.
+            # The host also reads this array to build its snap/pick index.
             return dict(chunk, edges=b"")
         return chunk
+
+    def picking_index(self, near=None):
+        """Let native picking use full edges, including visual pattern gaps."""
+        self._picking += 1
+        try:
+            return self.pick(near=near)
+        finally:
+            self._picking -= 1
 
     def filtered_eligible(self, group):
         return False if self.has_style(group) else self.eligible(group)

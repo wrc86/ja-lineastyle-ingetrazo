@@ -1,5 +1,17 @@
 # Historial de JA LineaStyle
 
+## 0.1.2 — 2026-10-03
+
+- Corregida la pérdida de referencias sobre líneas con estilo: el filtro visual
+  también quitaba sus aristas del índice de detección del modelo.
+- El índice nativo vuelve a recibir las aristas completas, conservando extremos,
+  puntos medios, puntos sobre aristas, cruces y referencias paralelas y perpendiculares,
+  incluso en los huecos de una línea punteada o interrumpida.
+- Referencias y selección en grupos y componentes girados o anidados, y referencias
+  sobre líneas creadas en la sesión actual. Se conserva la exclusión de geometría oculta.
+- Instrucciones de referencias en el panel y 13 pruebas de regresión con posiciones
+  reales de pantalla, incluido el cierre de caras con líneas tomadas como referencia.
+
 ## 0.1.1 — 2026-10-03
 
 - Pestaña de panel llamada **LineaStyle**, con el icono del plugin.
