@@ -1,0 +1,11 @@
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Copyright (C) 2026 Julio Angulo -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <title>JA LineaStyle</title>
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#15283f"/>
+  <path d="M7 9h18" fill="none" stroke="#65d5ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M7 16h5m5 0h5" fill="none" stroke="#d7a4ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M7 23h7" fill="none" stroke="#73e3b1" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="19" cy="23" r="1.5" fill="#73e3b1"/>
+  <path d="m23 27 1-4 5-5 2 2-5 5z" fill="#ffc85a" stroke="#15283f" stroke-width="1" stroke-linejoin="round"/>
+</svg>
