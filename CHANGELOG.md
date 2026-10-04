@@ -1,5 +1,13 @@
 # Historial de JA LineaStyle
 
+## 0.1.4 — 2026-10-04
+
+- Añadidos inglés y francés al español existente, con selector en el panel y preferencia persistente.
+- Traducción de colores, seis patrones, controles, ayuda, mensajes de estado y errores del plugin, y selector de color.
+- El cambio de idioma conserva la herramienta, los segmentos, la longitud pendiente y las propiedades de dibujo.
+- Cinco pruebas nuevas: idioma inicial, preferencia guardada y cambios en una sesión activa con los diálogos traducidos.
+- El empaquetador genera también el ZIP de una sola carpeta requerido por el catálogo de IngeTrazo.
+
 ## 0.1.3 — 2026-10-04
 
 - Corregido el bloqueo de navegación y dibujo desde el arranque al instalar 0.1.2

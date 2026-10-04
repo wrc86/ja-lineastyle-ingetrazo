@@ -2,24 +2,25 @@
 
 <img src="lineas_color/icons/ja_lineastyle.svg" width="64" alt="Icono de JA LineaStyle">
 
-[Descargar v0.1.3](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases/tag/v0.1.3) · [Manual ES/EN](MANUAL.md) · [Documentación](docs/Inicio.md) · [Reportar un problema](https://github.com/wrc86/ja-lineastyle-ingetrazo/issues)
+[Descargar v0.1.4](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases/tag/v0.1.4) · [Manual ES/EN/FR](MANUAL.md) · [Documentación](docs/Inicio.md) · [Reportar un problema](https://github.com/wrc86/ja-lineastyle-ingetrazo/issues)
 
 Repositorio independiente de **JA LineaStyle**. Consulta las otras extensiones en el [catálogo de Julio Angulo](https://github.com/wrc86/ja-ingetrazo-extensions).
 
 
-Versión 0.1.3. Extensión para dibujar líneas 3D con color, grosor y estilo,
+Versión 0.1.4. Extensión para dibujar líneas 3D con color, grosor y estilo,
 en una malla compartida por sesión de dibujo. Cerrar contornos coplanares forma caras.
 Probada con IngeTrazo 0.5.7 y la API de extensiones 2. Incluye un icono SVG propio
 en la opción **Extensiones → JA LineaStyle…** y en el menú contextual.
 La pestaña de los paneles muestra **LineaStyle** con su icono.
+El panel ofrece **Español, English y Français**. El selector **Idioma** cambia los controles, la ayuda y los mensajes al instante; conserva la sesión de dibujo y recuerda la elección al reiniciar. En el primer inicio utiliza el idioma de IngeTrazo cuando está disponible.
 
 **0.1.3 corrige el bloqueo de navegación y dibujo de 0.1.2 en el paquete macOS de IngeTrazo 0.5.7.** La versión se verificó contra la aplicación instalada: arranque, órbita, desplazamiento, zoom, referencias, dibujo, deshacer/rehacer y OpenGL. Actualiza la carpeta completa y reinicia el programa.
 
 ## Instalación
 
-El paquete de catálogo `ja_lineastyle-0.1.3-plugin.zip` contiene únicamente la carpeta del plugin, con su licencia e iconos.
+El paquete de catálogo `ja_lineastyle-0.1.4-plugin.zip` contiene únicamente la carpeta del plugin, con su licencia e iconos.
 
-1. Descomprima `ja_lineastyle-0.1.3-plugin.zip`.
+1. Descomprima `ja_lineastyle-0.1.4-plugin.zip`.
 2. En IngeTrazo, abra **Extensiones → Abrir carpeta de plugins**.
 3. Si tiene una versión anterior de Líneas de colores, sustituya su carpeta existente.
    Copie la carpeta **`lineas_color` completa** a esa ubicación.
@@ -115,7 +116,7 @@ desactiva y las líneas siguen disponibles con el color normal del estilo.
 
 ## Verificación
 
-Las 74 pruebas del plugin utilizan el cargador, las herramientas, el planificador de caras y el
+Las 79 pruebas del plugin utilizan el cargador, las herramientas, el planificador de caras y el
 códec `.igz` reales de IngeTrazo 0.5.7. Verifican sesiones, caras conectadas, cruces,
 propiedades por arista, edición dentro del grupo, migración de sesiones antiguas,
 deshacer/rehacer, copia, movimiento y guardado/reapertura. También verifican el color
@@ -133,8 +134,8 @@ JA LineaStyle se distribuye bajo **GPL-3.0-or-later**. El código fuente, la doc
 las pruebas y el modelo de ejemplo se pueden estudiar, modificar y redistribuir bajo
 esa licencia. El texto completo está en [LICENSE](LICENSE).
 
-El paquete `JA_LineaStyle_v0.1.3_source.zip` incluye el código y las herramientas para
-reproducir las pruebas y generar ambos ZIP. Consulte [CONTRIBUTING.md](CONTRIBUTING.md),
+El paquete `JA_LineaStyle_v0.1.4_source.zip` incluye el código y las herramientas para
+reproducir las pruebas y generar los paquetes instalable, de catálogo y de fuentes. Consulte [CONTRIBUTING.md](CONTRIBUTING.md),
 [CHANGELOG.md](CHANGELOG.md) y [NOTICES.md](NOTICES.md).
 
 El nombre visible es **JA LineaStyle**. La carpeta y el identificador interno

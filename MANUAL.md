@@ -1,8 +1,8 @@
-# JA LineaStyle · Manual de usuario / User manual
+# JA LineaStyle · Manual de usuario / User manual / Manuel d’utilisation
 
-**Versión / Version 0.1.3 · IngeTrazo 0.5.7 (API de extensiones 2) · Julio Angulo · GPL-3.0-or-later**
+**Versión / Version 0.1.4 · IngeTrazo 0.5.7 (API de extensiones 2) · Julio Angulo · GPL-3.0-or-later**
 
-[Español](#español) · [English](#english)
+[Español](#español) · [English](#english) · [Français](#français)
 
 ---
 
@@ -29,7 +29,7 @@ oscuro. Centro: paleta y colores personalizados. Abajo: progresión de grosores 
 
 ### 2. Instalación
 
-1. Descarga `ja_lineastyle-0.1.3-plugin.zip` desde el catálogo de IngeTrazo o desde
+1. Descarga `ja_lineastyle-0.1.4-plugin.zip` desde el catálogo de IngeTrazo o desde
    [las versiones del repositorio](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases).
 2. Descomprímelo. Obtendrás una carpeta llamada **`lineas_color`**
    (es el nombre interno; se conserva para actualizar versiones anteriores).
@@ -55,6 +55,7 @@ El panel aparece como pestaña **LineaStyle** con su icono:
 
 | Control | Qué hace |
 |---|---|
+| **Idioma** | Español, English o Français. Cambia al instante y recuerda la elección al reiniciar. |
 | **Paleta de colores** | Rojo, Naranja, Amarillo, Verde, Azul, Violeta, Negro y Blanco. |
 | **Otro color…** | Abre el selector para cualquier color. |
 | **Color actual** | Muestra el código del color activo (por ejemplo `#E53935`, el rojo de la paleta). |
@@ -145,7 +146,7 @@ estilos y dos caras conectadas dentro de un único grupo.
 - Las caras ocultan las líneas que quedan detrás; se respetan etiquetas ocultas y planos de sección.
 - Si una versión futura de IngeTrazo no admite el renderizador del plugin, el panel lo avisa
   y las líneas siguen visibles con el color normal.
-- La interfaz está en español.
+- La interfaz ofrece español, inglés y francés; el selector del panel es independiente del idioma de IngeTrazo.
 
 ### 9. Problemas frecuentes
 
@@ -189,11 +190,11 @@ Lines are real 3D geometry: they join at vertices, split at crossings and
 *Top: the six line styles at several weights and colours, also on a dark background.
 Middle: palette and custom colours. Bottom: on-screen weight progression.*
 
-> **Note:** the interface is in Spanish. Spanish labels are shown in parentheses.
+Choose **English** in the panel’s **Language** selector. Controls, help and messages change immediately; the choice is remembered after restarting. The selector also offers Español and Français.
 
 ### 2. Installation
 
-1. Download `ja_lineastyle-0.1.3-plugin.zip` from the IngeTrazo catalog or the
+1. Download `ja_lineastyle-0.1.4-plugin.zip` from the IngeTrazo catalog or the
    [repository releases](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases).
 2. Unzip it. You get a folder named **`lineas_color`** (internal name, kept for upgrades).
 3. In IngeTrazo open **Extensions → Open plugins folder** and copy the folder there.
@@ -214,6 +215,7 @@ It appears as a **LineaStyle** panel tab:
 
 | Control | What it does |
 |---|---|
+| **Language** | Español, English or Français. Applies immediately and is remembered after restarting. |
 | **Palette** | Red, Orange, Yellow, Green, Blue, Violet, Black, White. |
 | **Other colour…** (*Otro color…*) | Opens a colour picker. |
 | **Current colour** (*Color actual*) | Shows the active colour code, e.g. `#E53935` (palette red). |
@@ -293,3 +295,82 @@ precision. These extensions come from his daily practice with BIM and digital to
 - Web: [lineaprima.co](https://lineaprima.co) · Profile: [lineaprima.co/julio-eduardo-angulo](https://lineaprima.co/julio-eduardo-angulo/)
 - Email: info@lineaprima.co · Instagram: [@buskua.co](https://instagram.com/buskua.co)
 - Code and bug reports: [github.com/wrc86/ja-lineastyle-ingetrazo](https://github.com/wrc86/ja-lineastyle-ingetrazo/issues)
+
+
+---
+
+## Français
+
+### 1. Présentation
+
+JA LineaStyle permet de tracer des **lignes 3D avec une couleur, une épaisseur et un style de ligne** dans IngeTrazo, puis de modifier ces propriétés sur des lignes existantes. Les segments partagent leurs sommets, se divisent aux intersections et forment une face lorsqu’un contour fermé est coplanaire.
+
+### 2. Installation et langue
+
+1. Téléchargez `ja_lineastyle-0.1.4-plugin.zip` depuis le [catalogue d’IngeTrazo](https://ingetrazo.com/extensiones) ou les [versions du projet](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases).
+2. Décompressez le ZIP et copiez le dossier complet **`lineas_color`** dans le dossier indiqué par **Extensions → Ouvrir le dossier des extensions**. Remplacez le dossier de la version précédente lors d’une mise à jour.
+3. Redémarrez IngeTrazo et ouvrez **Extensions → JA LineaStyle…**. L’onglet du panneau s’appelle **LineaStyle** et conserve son icône.
+4. Choisissez **Français** dans le sélecteur **Langue** du panneau. Les contrôles, l’aide et les messages changent immédiatement. Le choix est conservé au redémarrage.
+
+Le panneau propose aussi **Español** et **English**. Au premier démarrage, il reprend la langue d’IngeTrazo si elle est prise en charge, sinon l’espagnol. Ce réglage concerne LineaStyle ; les autres outils et menus conservent la langue d’IngeTrazo.
+
+![Panneau de LineaStyle en français](docs/panel_fr.png)
+
+### 3. Contrôles
+
+| Contrôle | Fonction |
+|---|---|
+| **Langue** | Español, English ou Français ; changement immédiat, choix mémorisé. |
+| **Palette** | Rouge, Orange, Jaune, Vert, Bleu, Violet, Noir et Blanc. |
+| **Autre couleur…** | Ouvre un sélecteur de couleur traduit dans la langue du panneau. |
+| **Couleur actuelle** | Affiche le code de la couleur choisie, par exemple `#E53935`. |
+| **Épaisseur à l’écran** | De **1 à 12 px** ; reste constante lors du zoom, sans épaisseur physique. |
+| **Style de ligne** | Continue, Pointillée, Tirets, Tirets longs, Trait mixte ou Trait mixte à deux points. |
+| **Tracer une ligne de couleur** | Active l’outil de dessin. |
+| **Appliquer à la sélection** | Applique la couleur, l’épaisseur et le style actuels aux lignes ou groupes sélectionnés. |
+| **Rétablir le style** | Retire les propriétés visuelles de l’extension et conserve la géométrie. |
+
+### 4. Tracer des lignes et des faces
+
+1. Choisissez une couleur, une épaisseur et un style.
+2. Cliquez sur **Tracer une ligne de couleur**. Le curseur devient un crayon de la couleur choisie ; sa pointe correspond au point du clic.
+3. Cliquez sur le point de départ puis sur le point d’arrivée. Continuez à cliquer pour enchaîner les segments, ou saisissez une longueur.
+4. **Échap** termine la chaîne en cours et permet d’en commencer une autre dans le même groupe. **Espace** revient à l’outil de sélection.
+
+Toutes les lignes tracées tant que l’outil reste actif appartiennent à **un seul groupe**, même si vous changez de couleur, de style ou de langue. Chaque arête conserve ses propres propriétés. Revenir au dessin après avoir activé un autre outil crée un nouveau groupe.
+
+Fermer un contour coplanaire crée une face. Une diagonale peut partager cette face en deux. Un contour qui n’est pas plan ne crée pas de surface. Double-cliquez sur un groupe de LineaStyle pour l’ouvrir et poursuivre le dessin dans la même maille, sans sous-groupes.
+
+### 5. Accrochages et directions
+
+Les extrémités, milieux, intersections et points sur les arêtes visibles servent de références. Les six styles prennent en charge ces accrochages, y compris dans les espaces visuels des pointillés, dans les groupes transformés ou imbriqués et sur les segments nouvellement tracés.
+
+Après le premier clic, survolez une arête puis appuyez sur **↓** pour verrouiller une direction parallèle. Appuyez à nouveau pour une perpendiculaire, puis une troisième fois pour libérer la direction. **Maj** maintient une inférence active ; les autres flèches verrouillent les axes natifs. Les éléments masqués n’offrent pas d’accrochage.
+
+### 6. Modifier des lignes existantes
+
+Sélectionnez un groupe ou des arêtes dans un groupe ouvert, choisissez les propriétés puis cliquez sur **Appliquer à la sélection**. Le menu contextuel **JA LineaStyle** change uniquement la couleur et conserve les épaisseurs et les styles de chaque arête.
+
+Les lignes isolées sélectionnées sont réunies dans un groupe. Pour les arêtes d’une face non groupée, groupez d’abord la géométrie avec les outils natifs. Rétablir le style d’un groupe retire ses propriétés visuelles sans effacer ses faces ; sur les arêtes d’un groupe ouvert, cela rétablit le style par défaut du groupe.
+
+Une ligne sélectionnée apparaît avec la surbrillance d’IngeTrazo. Désélectionnez-la pour voir sa couleur.
+
+### 7. Enregistrer, annuler et exporter
+
+La création, l’application et le rétablissement des styles prennent en charge **Annuler / Rétablir**. Déplacer, tourner, copier et supprimer utilisent les outils natifs. Enregistrez au format **`.igz`** pour conserver la géométrie et les propriétés de LineaStyle.
+
+Les couleurs et les styles sont visibles dans la vue 3D et dans les images raster du modèle. Ils ne sont pas conservés lors d’un export vers SKP, DXF, Blender ou un dessin vectoriel. Décomposer un groupe supprime ses propriétés d’extension. Une autre installation d’IngeTrazo doit disposer de LineaStyle pour afficher ces styles.
+
+Les espaces des motifs sont uniquement visuels : les arêtes restent entières pour la création des faces, les accrochages et la sélection. Les faces, les éléments masqués et les plans de coupe sont respectés. Ouvrez `Ejemplo_JA_LineaStyle.igz` dans le dépôt ou dans le paquet complet pour découvrir les six styles et deux faces reliées.
+
+### 8. Résoudre un problème
+
+| Problème | Solution |
+|---|---|
+| La couleur n’est pas visible | Désélectionnez la ligne pour retirer la surbrillance. |
+| La sélection possède déjà ce style | Choisissez une autre couleur, épaisseur ou un autre style. |
+| Impossible de modifier les arêtes d’une boîte | Groupez d’abord la géométrie. |
+| Le style a disparu | Vérifiez si le groupe a été décomposé ou exporté ; utilisez Annuler ou rechargez le fichier `.igz`. |
+| L’extension n’apparaît pas | Vérifiez que le dossier `lineas_color` contient directement `__init__.py`, puis redémarrez IngeTrazo. |
+
+**Auteur : Julio Angulo.** Logiciel libre sous **GPL-3.0-or-later**. Code, versions et signalement des problèmes : [ja-lineastyle-ingetrazo](https://github.com/wrc86/ja-lineastyle-ingetrazo).

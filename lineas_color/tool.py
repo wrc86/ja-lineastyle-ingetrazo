@@ -6,9 +6,7 @@ from .model import AddSessionSegment, DrawingSession
 
 
 class ColorLineTool(LineTool):
-    name = "JA LineaStyle · Línea"
     shortcut = None
-    description = "Dibujar líneas conectadas y planos con color, grosor y estilo."
     wireframe_depth_tested = True
     is_color_line_tool = True
     icon = None
@@ -17,6 +15,18 @@ class ColorLineTool(LineTool):
         super().__init__()
         self.controller = controller
         self.session = None
+
+    @property
+    def name(self):
+        return self.controller.tr("JA LineaStyle · Línea")
+
+    @property
+    def description(self):
+        return self.controller.tr("Dibujar líneas conectadas y planos con color, grosor y estilo.")
+
+    @property
+    def vcb_label(self):
+        return self.controller.tr("Longitud")
 
     def on_activate(self, viewport):
         super().on_activate(viewport)

@@ -36,8 +36,9 @@ def width_offsets(pixels, width, height):
 
 
 class ColorRenderer:
-    def __init__(self, viewport):
+    def __init__(self, viewport, translate=None):
         self.viewport = viewport
+        self.translate = translate or (lambda text: text)
         self.original = viewport._draw_rubber_band
         self.chunk = viewport._group_chunk
         self.eligible = viewport._instanced_eligible
@@ -149,7 +150,7 @@ class ColorRenderer:
                 self.viewport.update()
                 log.exception("JA LineaStyle: se desactivó el pase de color.")
                 self.viewport.flash_status(
-                    "JA LineaStyle: el renderizador no es compatible; las líneas se conservan.",
+                    self.translate("JA LineaStyle: el renderizador no es compatible; las líneas se conservan."),
                     8000)
         tool = self.viewport.active_tool
         if self.failed or not getattr(tool, "is_color_line_tool", False):
