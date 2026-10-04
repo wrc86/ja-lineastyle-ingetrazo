@@ -1,5 +1,8 @@
 # Contribuir a JA LineaStyle
 
+**Alcance de esta separación:** este repositorio contiene el plugin, su documentación y el ZIP instalable. Los comandos de pruebas y empaquetado descritos abajo pertenecen al entorno o paquete de fuentes original; sus carpetas `tests/`, `scripts/` y `.reference/` no se incluyen aquí. No se presentan como comandos ejecutables desde esta copia.
+
+
 JA LineaStyle 0.1.2 es un plugin de código abierto bajo **GPL-3.0-or-later**.
 Las contribuciones se distribuyen bajo esa misma licencia. Véase `LICENSE`.
 

@@ -1,5 +1,12 @@
 # JA LineaStyle · IngeTrazo
 
+<img src="lineas_color/icons/ja_lineastyle.svg" width="64" alt="Icono de JA LineaStyle">
+
+[Descargar v0.1.2](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases/tag/v0.1.2) · [Manual ES/EN](MANUAL.md) · [Documentación](docs/Inicio.md) · [Reportar un problema](https://github.com/wrc86/ja-lineastyle-ingetrazo/issues)
+
+Repositorio independiente de **JA LineaStyle**. Consulta las otras extensiones en el [catálogo de Julio Angulo](https://github.com/wrc86/ja-ingetrazo-extensions).
+
+
 Versión 0.1.2. Extensión para dibujar líneas 3D con color, grosor y estilo,
 en una malla compartida por sesión de dibujo. Cerrar contornos coplanares forma caras.
 Probada con IngeTrazo 0.5.7 y la API de extensiones 2. Incluye un icono SVG propio
@@ -21,7 +28,7 @@ No instale el ZIP como un `.rbz`: esta es una extensión Python de IngeTrazo.
 
 ## Muestrario de estilos de línea
 
-![Patrones, colores y grosores de línea](../docs/images/lineastyle-muestrario.png)
+![Patrones, colores y grosores de línea](docs/images/lineastyle-muestrario.png)
 
 La imagen de referencia aportada por Julio Angulo reúne patrones continuos, punteados e interrumpidos y combinaciones de puntos y rayas en la fila superior, variaciones de color y gris en el centro y una progresión de grosores rojos abajo. El recuadro negro muestra el contraste sobre fondo oscuro.
 
@@ -129,3 +136,9 @@ reproducir las pruebas y generar ambos ZIP. Consulte [CONTRIBUTING.md](CONTRIBUT
 El nombre visible es **JA LineaStyle**. La carpeta y el identificador interno
 `lineas_color` se mantienen para actualizar instalaciones, conservar las preferencias
 y leer los estilos guardados en modelos de las versiones anteriores.
+
+## Galería
+
+<img src="docs/images/lineastyle-panel.png" width="360" alt="JA LineaStyle: lineastyle-panel">
+
+<img src="docs/images/lineastyle-muestrario.png" width="800" alt="JA LineaStyle: lineastyle-muestrario">
