@@ -1,5 +1,17 @@
 # Historial de JA LineaStyle
 
+## 0.1.3 — 2026-10-04
+
+- Corregido el bloqueo de navegación y dibujo desde el arranque al instalar 0.1.2
+  en el paquete macOS de IngeTrazo 0.5.7. Ese binario utiliza `_pick_index()` sin
+  el parámetro `near` presente en el código más reciente con la misma versión.
+- La extensión comprueba la firma de la función nativa una vez y utiliza la
+  llamada compatible; conserva las referencias sobre las líneas con estilo.
+- Dos pruebas de regresión para ambas firmas: arranque, órbita, desplazamiento,
+  zoom, dibujo encadenado con referencias, deshacer y rehacer.
+- Prueba aislada contra `/Applications/IngeTrazo.app`: reproducido el error de
+  0.1.2 y comprobados ocho controles de funcionamiento con 0.1.3, incluido OpenGL.
+
 ## 0.1.2 — 2026-10-03
 
 - Corregida la pérdida de referencias sobre líneas con estilo: el filtro visual

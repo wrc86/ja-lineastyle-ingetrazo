@@ -3,12 +3,12 @@
 **Alcance de esta separación:** este repositorio contiene el plugin, su documentación y el ZIP instalable. Los comandos de pruebas y empaquetado descritos abajo pertenecen al entorno o paquete de fuentes original; sus carpetas `tests/`, `scripts/` y `.reference/` no se incluyen aquí. No se presentan como comandos ejecutables desde esta copia.
 
 
-JA LineaStyle 0.1.2 es un plugin de código abierto bajo **GPL-3.0-or-later**.
+JA LineaStyle 0.1.3 es un plugin de código abierto bajo **GPL-3.0-or-later**.
 Las contribuciones se distribuyen bajo esa misma licencia. Véase `LICENSE`.
 
 ## Preparar el entorno
 
-Descomprima `JA_LineaStyle_v0.1.2_source.zip` y trabaje desde su raíz. Requiere
+Descomprima `JA_LineaStyle_v0.1.3_source.zip` y trabaje desde su raíz. Requiere
 Python 3.10 o posterior, Git y las dependencias de IngeTrazo. El programa
 anfitrión se descarga por separado; no forma parte del paquete del plugin.
 
@@ -30,12 +30,19 @@ Para verificar píxeles en macOS, use:
 ```sh
 QT_QPA_PLATFORM=cocoa dev-env/bin/python -m pytest tests/test_ja_lineastyle.py -q
 QT_QPA_PLATFORM=cocoa dev-env/bin/python scripts/preview_ja_lineastyle.py
+dev-env/bin/python scripts/probe_ja_lineastyle_app.py
 ```
 
 Las pruebas de OpenGL se omiten cuando el entorno no ofrece un contexto
 gráfico. En Linux use un escritorio gráfico y `QT_QPA_PLATFORM=xcb` cuando
 esté disponible. Una captura de desarrollo no sustituye una prueba manual
 de instalación y reinicio en el binario de IngeTrazo.
+
+El último comando prueba el binario instalado en `/Applications/IngeTrazo.app`
+con una instancia separada, plugins temporales, configuración y autoguardado
+aislados. Comprueba arranque, órbita, desplazamiento, zoom, referencias, dibujo,
+deshacer/rehacer y OpenGL. Una versión nominal igual del anfitrión puede tener
+una firma distinta de sus funciones privadas; compruebe también el binario.
 
 ## Proponer cambios
 

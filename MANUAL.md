@@ -1,6 +1,6 @@
 # JA LineaStyle · Manual de usuario / User manual
 
-**Versión / Version 0.1.2 · IngeTrazo 0.5.7 (API de extensiones 2) · Julio Angulo · GPL-3.0-or-later**
+**Versión / Version 0.1.3 · IngeTrazo 0.5.7 (API de extensiones 2) · Julio Angulo · GPL-3.0-or-later**
 
 [Español](#español) · [English](#english)
 
@@ -29,7 +29,7 @@ oscuro. Centro: paleta y colores personalizados. Abajo: progresión de grosores 
 
 ### 2. Instalación
 
-1. Descarga `ja_lineastyle-0.1.2.zip` desde el catálogo de IngeTrazo o desde
+1. Descarga `ja_lineastyle-0.1.3.zip` desde el catálogo de IngeTrazo o desde
    [las versiones del repositorio](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases).
 2. Descomprímelo. Obtendrás una carpeta llamada **`lineas_color`**
    (es el nombre interno; se conserva para actualizar versiones anteriores).
@@ -193,7 +193,7 @@ Middle: palette and custom colours. Bottom: on-screen weight progression.*
 
 ### 2. Installation
 
-1. Download `ja_lineastyle-0.1.2.zip` from the IngeTrazo catalog or the
+1. Download `ja_lineastyle-0.1.3.zip` from the IngeTrazo catalog or the
    [repository releases](https://github.com/wrc86/ja-lineastyle-ingetrazo/releases).
 2. Unzip it. You get a folder named **`lineas_color`** (internal name, kept for upgrades).
 3. In IngeTrazo open **Extensions → Open plugins folder** and copy the folder there.

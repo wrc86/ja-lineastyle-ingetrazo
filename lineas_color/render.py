@@ -8,6 +8,7 @@ It reuses the scratch preview buffer; the actual preview refills it afterwards.
 No host source file is modified. Raster render_image also uses this pass.
 """
 from array import array
+from inspect import signature
 import logging
 import math
 
@@ -44,6 +45,9 @@ class ColorRenderer:
         self.sync = viewport._sync_edges
         self.hover = viewport._upload_hover_edge
         self.pick = viewport._pick_index
+        # The shipped macOS 0.5.7 binary predates the optional `near` query
+        # present in the newer source with that same application version.
+        self._pick_with_near = "near" in signature(self.pick).parameters
         self._picking = 0
         self.failed = False
         self.sources = {}
@@ -96,7 +100,9 @@ class ColorRenderer:
         """Let native picking use full edges, including visual pattern gaps."""
         self._picking += 1
         try:
-            return self.pick(near=near)
+            if self._pick_with_near:
+                return self.pick(near=near)
+            return self.pick()
         finally:
             self._picking -= 1
 
