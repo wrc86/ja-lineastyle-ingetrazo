@@ -17,7 +17,9 @@ La pestaña de los paneles muestra **LineaStyle** con su icono.
 
 ## Instalación
 
-1. Descomprima `ja_lineastyle-0.1.3.zip`.
+El paquete de catálogo `ja_lineastyle-0.1.3-plugin.zip` contiene únicamente la carpeta del plugin, con su licencia e iconos.
+
+1. Descomprima `ja_lineastyle-0.1.3-plugin.zip`.
 2. En IngeTrazo, abra **Extensiones → Abrir carpeta de plugins**.
 3. Si tiene una versión anterior de Líneas de colores, sustituya su carpeta existente.
    Copie la carpeta **`lineas_color` completa** a esa ubicación.

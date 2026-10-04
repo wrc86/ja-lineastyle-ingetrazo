@@ -11,7 +11,7 @@ Guía inicial de **JA LineaStyle 0.1.3** para **IngeTrazo 0.5.7 / API 2**.
 
 ## Instalación rápida
 
-1. Descarga `ja_lineastyle-0.1.3.zip` y descomprímelo.
+1. Descarga `ja_lineastyle-0.1.3-plugin.zip` y descomprímelo.
 2. En IngeTrazo abre **Extensiones → Abrir carpeta de plugins**.
 3. Copia la carpeta `lineas_color` completa y reinicia el programa.
 4. Abre JA LineaStyle desde **Extensiones**.
