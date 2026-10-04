@@ -19,6 +19,14 @@ dos caras conectadas, todo dentro de un único grupo sin subgrupos por segmento.
 
 No instale el ZIP como un `.rbz`: esta es una extensión Python de IngeTrazo.
 
+## Muestrario de estilos de línea
+
+![Patrones, colores y grosores de línea](../docs/images/lineastyle-muestrario.png)
+
+La imagen de referencia aportada por Julio Angulo reúne patrones continuos, punteados e interrumpidos y combinaciones de puntos y rayas en la fila superior, variaciones de color y gris en el centro y una progresión de grosores rojos abajo. El recuadro negro muestra el contraste sobre fondo oscuro.
+
+Úsala para comparar el aspecto de los trazos; no representa una escala numérica de grosores. La extensión ofrece seis estilos y un grosor visual de 1 a 12 px.
+
 ## Uso
 
 - Elija un color de la paleta o **Otro color…**, un **Grosor visual**, de 1 a 12 px,
